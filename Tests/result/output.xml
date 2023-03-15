@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.7.3 on win32)" generated="20230315 21:15:42.395" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\vinot\PycharmProjects\HevoPipeline\Tests">
+<suite id="s1-s1" name="Testsuite" source="C:\Users\vinot\PycharmProjects\HevoPipeline\Tests\Testsuite.robot">
+<test id="s1-s1-t1" name="Test_1">
+<kw name="Login into Hevo pipiline" library="Common_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230315 21:15:43.246" level="INFO">Opening browser 'chrome' to base url 'https://in.hevodata.com/login'.</msg>
+<status status="PASS" starttime="20230315 21:15:43.246" endtime="20230315 21:15:53.048"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230315 21:15:53.048" endtime="20230315 21:15:53.049"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230315 21:15:53.049" endtime="20230315 21:15:55.053"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230315 21:15:55.053" endtime="20230315 21:15:57.193"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_locator}</arg>
+<arg>${hevo_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 21:15:57.194" level="INFO">Typing text 'vinoth.gopal@ivanti.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20230315 21:15:57.193" endtime="20230315 21:16:03.406"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${coutinue_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:03.408" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230315 21:16:03.407" endtime="20230315 21:16:07.490"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_locator}</arg>
+<arg>${hevo_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:07.490" level="INFO">Typing text 'Sree@1234' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20230315 21:16:07.490" endtime="20230315 21:16:13.628"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:13.630" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230315 21:16:13.629" endtime="20230315 21:16:17.732"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>click element</arg>
+<arg>${close_tour}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${close_tour}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:17.732" level="INFO">Clicking element '//*[@data-id='product-tour-close-icon-button']'.</msg>
+<status status="PASS" starttime="20230315 21:16:17.732" endtime="20230315 21:16:23.177"/>
+</kw>
+<status status="PASS" starttime="20230315 21:16:17.732" endtime="20230315 21:16:23.177"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${hevo_username}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 21:16:27.205" level="INFO">Current page contains text 'vinoth.gopal@ivanti.com'.</msg>
+<status status="PASS" starttime="20230315 21:16:23.177" endtime="20230315 21:16:27.205"/>
+</kw>
+<status status="PASS" starttime="20230315 21:15:43.245" endtime="20230315 21:16:27.205"/>
+</kw>
+<kw name="fetch data from destination database" library="hevo_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${destination_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:27.205" level="INFO">Clicking element '//span[text()='Destinations']'.</msg>
+<status status="PASS" starttime="20230315 21:16:27.205" endtime="20230315 21:16:31.427"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${open_destination_setup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:31.427" level="INFO">Clicking element '//div[contains(text(),' MySQL Destination ')]/following::div[1][contains(text(),'MySQL')]'.</msg>
+<status status="PASS" starttime="20230315 21:16:31.427" endtime="20230315 21:16:35.558"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${workbenach_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:35.558" level="INFO">Clicking element '//a[@routerlink="./workbench"]'.</msg>
+<status status="PASS" starttime="20230315 21:16:35.558" endtime="20230315 21:16:39.748"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pre_elem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:39.749" level="INFO">Clicking element '//pre[@class=' CodeMirror-line ']'.</msg>
+<status status="PASS" starttime="20230315 21:16:39.748" endtime="20230315 21:16:43.876"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230315 21:16:48.893" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230315 21:16:43.876" endtime="20230315 21:16:48.893"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${pre_elem}</arg>
+<arg>select * from `${destination_database}`.`vinothgopal_hevodata_${table_name}`</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230315 21:16:48.893" level="INFO">Sending key(s) ('select * from `u653007459_mysql_test`.`vinothgopal_hevodata_testingdemo1`',) to //pre[@class=' CodeMirror-line '] element.</msg>
+<msg timestamp="20230315 21:16:53.240" level="INFO">Sending keys select * from `u653007459_mysql_test`.`vinothgopal_hevodata_testingdemo1`</msg>
+<status status="PASS" starttime="20230315 21:16:48.893" endtime="20230315 21:16:57.418"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${runquery}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:16:57.418" level="INFO">Clicking element '//button[contains(text(),' Run Query ')]'.</msg>
+<status status="PASS" starttime="20230315 21:16:57.418" endtime="20230315 21:17:01.649"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230315 21:17:06.652" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230315 21:17:01.649" endtime="20230315 21:17:06.652"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230315 21:17:08.784" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230315 21:17:06.652" endtime="20230315 21:17:08.784"/>
+</kw>
+<status status="PASS" starttime="20230315 21:16:27.205" endtime="20230315 21:17:08.784"/>
+</kw>
+<kw name="verify initial data in destination database" library="hevo_keywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${name_record1}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 21:17:12.842" level="INFO">Current page contains text 'vinoth'.</msg>
+<status status="PASS" starttime="20230315 21:17:08.784" endtime="20230315 21:17:12.843"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${name_record2}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 21:17:16.881" level="INFO">Current page contains text 'sree'.</msg>
+<status status="PASS" starttime="20230315 21:17:12.843" endtime="20230315 21:17:16.881"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${name_record3}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 21:17:20.928" level="INFO">Current page contains text 'hiran'.</msg>
+<status status="PASS" starttime="20230315 21:17:16.882" endtime="20230315 21:17:20.928"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${age_record1}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 21:17:24.973" level="INFO">Current page contains text '30'.</msg>
+<status status="PASS" starttime="20230315 21:17:20.928" endtime="20230315 21:17:24.973"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${age_record2}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 21:17:29.018" level="INFO">Current page contains text '29'.</msg>
+<status status="PASS" starttime="20230315 21:17:24.973" endtime="20230315 21:17:29.018"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${age_record3}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 21:17:33.069" level="INFO">Current page contains text '2'.</msg>
+<status status="PASS" starttime="20230315 21:17:29.018" endtime="20230315 21:17:33.069"/>
+</kw>
+<status status="PASS" starttime="20230315 21:17:08.784" endtime="20230315 21:17:33.069"/>
+</kw>
+<kw name="Delete hevo pipeline" library="hevo_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pipline_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:17:33.069" level="INFO">Clicking element '//span[text()='Pipelines']'.</msg>
+<status status="PASS" starttime="20230315 21:17:33.069" endtime="20230315 21:17:37.260"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${expand_arrow}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:17:37.260" level="INFO">Clicking element '//span[text()=' Active ']/../../following::hd-icon[1]'.</msg>
+<status status="PASS" starttime="20230315 21:17:37.260" endtime="20230315 21:17:41.389"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thredot_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:17:41.389" level="INFO">Clicking element '//span[text()=' Active ']/../../following::div[1]/button'.</msg>
+<status status="PASS" starttime="20230315 21:17:41.389" endtime="20230315 21:17:45.536"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${delete_pipeline}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:17:45.536" level="INFO">Clicking element '//*[contains(text(),' Delete')]'.</msg>
+<status status="PASS" starttime="20230315 21:17:45.536" endtime="20230315 21:17:49.736"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${confirm_delete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 21:17:49.736" level="INFO">Clicking element '//*[contains(text(),' DELETE this Pipeline')]'.</msg>
+<status status="PASS" starttime="20230315 21:17:49.736" endtime="20230315 21:17:53.843"/>
+</kw>
+<status status="PASS" starttime="20230315 21:17:33.069" endtime="20230315 21:17:53.843"/>
+</kw>
+<doc>This test create a table in data base ,insert record into da and create a hevo pipline</doc>
+<status status="PASS" starttime="20230315 21:15:43.244" endtime="20230315 21:17:53.843"/>
+</test>
+<doc>This suite has hevo pipline testcase</doc>
+<status status="PASS" starttime="20230315 21:15:42.426" endtime="20230315 21:17:53.843"/>
+</suite>
+<status status="PASS" starttime="20230315 21:15:42.410" endtime="20230315 21:17:53.843"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testsuite">Tests.Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

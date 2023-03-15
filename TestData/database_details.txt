@@ -1,0 +1,11 @@
+*** Variables ***
+${table_name}    automationhevo
+${name_record1}   hevo1
+${name_record2}   hevo2
+${name_record3}   hevo3
+${age_record1}   30
+${age_record2}   29
+${age_record3}   2
+${updated_name1}   Testhevo1
+${updated_name2}   Testhevo2
+${updated_name3}   Testhevo3

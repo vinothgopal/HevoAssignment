@@ -1,0 +1,23 @@
+*** Variables ***
+#hevo accout details
+${URL}    https://in.hevodata.com/login
+${browser}   chrome
+${hevo_username}   pass_in_runtime
+${hevo_password}   pass_in_runtime
+
+#my SQL source database details
+
+${source_host}     localhost
+${source_user}  root
+${source_password}     pass_in_runtime
+${source_database}   hevodata
+${source_port}   3306
+${source_public_ip}   pass_in_runtime
+${souce_public_port}   pass_in_runtime
+
+#my SQL destination database details
+${destination_host}   pass_in_runtime
+${destination_port}    pass_in_runtime
+${destination_username}   pass_in_runtime
+${destination_password}   pass_in_runtime
+${destination_database}    pass_in_runtime

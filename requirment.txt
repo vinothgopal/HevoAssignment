@@ -1,0 +1,4 @@
+mysql-connector-python==8.0.32
+robotframework-seleniumlibrary==6.0.0
+PyAutoGUI==0.9.53
+robotframework==6.0.2

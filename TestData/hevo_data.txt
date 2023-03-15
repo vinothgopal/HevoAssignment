@@ -1,0 +1,7 @@
+*** Variables ***
+${prefix}   vinothgopal
+${suorce_database_name}    MySQL
+${object_screen}    Select the objects you want to replicate
+${destination_page}    Select Destination
+${destination_database_name}    MySQL
+${finalscreen}   every 15 minutes

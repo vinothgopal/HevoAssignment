@@ -7,11 +7,11 @@ ${hevo_password}   pass_in_runtime
 
 #my SQL source database details
 
-${source_host}     localhost
-${source_user}  root
+${source_host}     pass_in_runtime
+${source_user}  pass_in_runtime
 ${source_password}     pass_in_runtime
-${source_database}   hevodata
-${source_port}   3306
+${source_database}   pass_in_runtime
+${source_port}   pass_in_runtime
 ${source_public_ip}   pass_in_runtime
 ${souce_public_port}   pass_in_runtime
 
